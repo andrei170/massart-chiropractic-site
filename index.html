@@ -355,15 +355,12 @@ section { padding: 96px 0; }
 .photo-band {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  height: 60vh;
-  min-height: 340px;
-  max-height: 680px;
+  height: auto;
   position: relative;
   overflow: hidden;
 }
 .photo-band img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+  width: 100%; height: auto;
   object-position: 50% 30%;
   display: block;
 }
@@ -461,7 +458,7 @@ section { padding: 96px 0; }
   position: relative;
 }
 .doctor-photo img {
-  width: 100%; height: 100%; object-fit: cover; object-position: top;
+  width: 100%; height: 100%; object-fit: contain; background: var(--cream); object-position: top;
   transition: transform 0.5s ease;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -522,7 +519,8 @@ section { padding: 96px 0; }
 }
 .gallery-item img {
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--cream);
   object-position: top center;
   display: block;
   transition: transform 0.5s ease, filter 0.3s;
